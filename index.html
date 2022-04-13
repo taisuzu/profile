@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="Taiki-homepage.css">
+    <!-- ↓おしゃれフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Tai-suzuのホームページ</title>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="homepage.js" defer></script>
+</head>
+
+<body>
+    <div class="mask" id="mask"></div>
+
+    <a class="menuButton" id="menuButton">
+        <div></div>
+        <div></div>
+        <div></div>
+    </a>
+
+
+    <main>
+        <nav id="nav">
+            <ul>
+                <li><a href="https://tai-suzu.com">HomePage</a></li>
+                <li><a href="https://tai-suzu.com/%e3%83%9d%e3%83%bc%e3%83%88%e3%83%95%e3%82%a9%e3%83%aa%e3%82%aa/">ポートフォリオサイト</a></li>
+                <li><a href="https://youtu.be/0z8fZbjt8pw">Youtubeチャンネル</a></li>
+            </ul>
+        </nav>
+        <!-- firstView -->
+        <div class="first-view text-focus-in">
+            <h1><span>p</span>
+                <span>r</span>
+                <span>o</span>
+                <span>f</span>
+                <span>i</span>
+                <span>l</span>
+                <span>e</span>
+            </h1>
+            <div id="scrool">
+                <div class="scrolldown1"><span>Scroll</span></div>
+            </div>
+            <div class="arrow"></div>
+        </div>
+        <!-- メインコンテンツ -->
+        <div class="contents">
+            <div class="profile">
+                <br>
+                <h1>About Me</h1>
+                <div class="profCon">
+                    <div class="name">
+                        <h2>Taiki Suzuki</h2>
+                        <h4>歌と旅好きエンジニア</h4>
+                        <br>
+                        <p>人に笑顔と喜びを与えられる人間になりたい</p>
+                        <p>そんな想いを軸に、現在は</p>
+                        <p><span>システムエンジニアとして働きながら</span></p>
+                        <p>WebデザインやWeb開発を勉強中</p>
+                        <p>時々路上ライバーとして人前でギターの弾き語りも行っている。</p>
+                        <p>好きな言葉は「下を向いていては虹は見えないよ」</p>
+                        <!-- <p>一問一答はこちら</p> -->
+                    </div>
+                    <img id="profImg" src="image/plof.jpg">
+
+
+                </div>
+            </div>
+
+            <div class="skills">
+                <h1>Skills</h1>
+                <div class="skills-contents">
+                    <div class="icon">
+                        <img class="html-img" src="./image/1200px-HTML5_logo_and_wordmark.svg.png">
+                        <p>HTML5</p>
+                        <p>可読性を意識したWEBページの<br>コーディングが可能</p>
+
+                    </div>
+                    <div class="icon">
+                        <img class="css-img" src="./image/1452px-CSS3_logo_and_wordmark.svg.png">
+                        <p>CSS3</p>
+                        <p>基本的なレイアウトから<br>アニメーションの実装まで可能</p>
+                    </div>
+                    <div class="icon">
+                        <img class="sass-img" src="./image/1200px-Sass_Logo_Color.svg.png">
+                        <p>Sass</p>
+                        <p>基本的なコーディング、mixinを用いた<br>アニメーションの実装が可能</p>
+                    </div>
+                    <div class="icon">
+                        <img class="java-img" src="./image/java_logo2.jpeg">
+                        <p>Java</p>
+                        <p>オブジェクト指向を意識し<br>プログラミングを組むことが可能</p>
+                    </div>
+                    <div class="icon">
+                        <img class="JavaScript-img" src="./image/Javascript_badge.svg_.webp">
+                        <p>JavaScript</p>
+                        <p>DOMの操作から<br>簡単なプログラミングも可能</p>
+                    </div>
+                    <div class="icon">
+                        <img class="jQuery-img" src="./image/logo_jquery.png">
+                        <p>jQuery</p>
+                        <p>複雑なセレクタを要する<br>DOMの操作が可能</p>
+                    </div>
+                    <div class="icon">
+                        <img class="wordpress-img" src="./image/wordpress-logo3.png">
+                        <p>WordPress</p>
+                        <p>基本的な環境構築からHPの作成<br>テーマの編集まで可能</p>
+                    </div>
+                    <div class="icon">
+                        <img class="xd-img" src="./image/XD.png">
+                        <p>Adobe XD</p>
+                        <p>簡単なワイヤーフレームから<br>デザインカンプの作成が可能</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Likes">
+                <br>
+                <h1>Likes/Interests</h1>
+                <!-- Slider main container -->
+                <div class="swiper-container mySwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="sing">
+                                <h3>―SINGING―</h3>
+                                <img id="singing" src="image/20210705_210708_0.jpg">
+                                <div class="LikesCon">
+                                    <br>
+                                    <br>
+                                    <p>アコースティックギター弾き語り歴10年</p>
+                                    <p>ピアノ弾き語り歴3年</p>
+                                    <p>大学時代は弾き語りサークルを創設し<br>のべ５０人の初心者にアコースティックギターを教えてきた</p>
+                                    <p>カラオケの十八番は松田聖子</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="～travel～">
+                                <h3>―TRAVELING―</h3>
+                                <img src="image/preav.jpg">
+                                <div class="LikesCon">
+                                    <br>
+                                    <br>
+                                    <p>高校三年の春にロサンゼルスへ言ったことをきっかけに一人旅に目覚める</p>
+                                    <p>大学の長期休みは国内外問わず様々な場所へ旅行していた</p>
+                                    <p>これまでに14か国へ訪問</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="soccer">
+                                <h3>―SOCCER―</h3>
+                                <img src="image/stanf.jpg">
+                                <div class="LikesCon">
+                                    <br>
+                                    <br>
+                                    <p>小中高10年間プレーヤーとしてほぼ毎日のようにサッカーに明け暮れる</p>
+                                    <p>大学からは観戦を主とし、たまにフットサルをプレー</p>
+                                    <p>2017年9月念願であったイングランドプレミアリーグのチェルシーの試合を現地観戦</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="programing">
+                                <h3>―PROGRAMMING―</h3>
+                                <img src="image/20210705_210718_3.jpg">
+                                <div class="ProgCon">
+                                    <br>
+                                    <br>
+                                    <p>大学4年時からプログラミングの勉強を開始</p>
+                                    <p>現在は３か月の研修期間を経てシステム会社でJavaを使った業務に従事(2021/07～)</p>
+                                    <p>HTML、CSS、JavaScriptのフロントエンド言語も扱うことが可能で、現在は当サイトを含むポートフォリオを作成中</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+
+            <div class="Work">
+                <h1>Work</h1>
+                <div id="sec">
+                    <ul>
+                        <li>
+                            <p class="title01">①ホームページ制作</p>
+                            <p>個人、企業様用のホームページの制作を承っております。
+                                <br>また、コーディング代行も承っております。
+                                <br>ご要望のヒアリングからフォローアップまで
+                                <br>迅速丁寧に行わせていただきます。
+
+                                <br>ホームページ以外にも様々なWebページや
+                                <br>ランディングページの制作をお任せ下さい。
+                            </p>
+                        </li>
+                        <li>
+                            <p class="title01">②ギター弾き語り講師</p>
+                            <p>弾き語り歴10年。大学時代に弾き語りサークルを設立し
+                                <br>50人以上のギター初心者に弾き語りの指導してきました。
+                                <br>「Fで挫折させない一生楽しむ弾き語り」
+                                <br>をスローガンに丁寧な指導をさせていただきます。
+
+                                <br>楽器選びから、コードを見ればどんな曲でも弾き語りができるようになるまでを
+                                <br>徹底的にサポートさせていただきます。
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="Contact">
+                <br>
+                <h1>Contact</h1>
+                <p>当ポートフォリオサイトにご訪問いただき、ありがとうございます。<br> お仕事のご依頼やご相談、ご飯、遊びの誘い、
+                    <br> ご不明な点等ございましたら、お気軽にご連絡ください。
+                    <br> ３日以内にはご連絡をさせていただきますが、
+                    <br>お急ぎの場合はTwitter / InstagramのDMにてご連絡ください。</p>
+                <!-- Make sure you don't change the form action-->
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <!-- Replace with accesKey sent to your email -->
+                    <input type="hidden" name="accessKey" value="d089b8f8-a802-4d5f-8d6f-26dd9ffb3e67">
+                    <!-- Required -->
+                    <div id="conName">
+                        <p><span>*</span>お名前</p>
+                        <input type="text" name="name">
+                        <!-- Optional -->
+                    </div>
+                    <div id="conSubject">
+                        <p>件名</p>
+                        <input type="text" name="subject">
+                        <!-- Optional -->
+                    </div>
+                    <div id="conEmail">
+                        <p><span>*</span>メールアドレス</p>
+                        <input type="text" name="email">
+                        <!-- Optional -->
+                    </div>
+                    <div id="conMessage">
+                        <p><span>*</span>内容</p>
+                        <!-- <input type="text" name="phone"> Optional -->
+                        <textarea name="message"></textarea>
+                        <!-- Optional -->
+                    </div>
+                    <!-- If you want replyTo to be set to specific email -->
+                    <!-- <input type="text" name="replyTo" value="myreplytoemail@example.com"> Optional -->
+                    <!-- Specify @ as reply to value if you want it to be customers email -->
+                    <input type="hidden" name="replyTo" value="@">
+                    <!-- Optional -->
+                    <!-- If you want form to redirect to a specific url after submission -->
+                    <input type="hidden" name="redirectTo" value="https://ksfw14.github.io/homepage/">
+                    <br>
+                    <input class="button-shadow" onclick="clickEvent()" type="submit" value="送信" />
+                </form>
+
+            </div>
+
+
+        </div>
+    </main>
+
+</body>
+
+<div class="footer">
+    <div class="footerWrapper">
+        <img id="logo" src="./image/logo_white.png" href="https://tai-suzu.com">
+    </div>
+</div>
+
+<div class="SNS">
+    <ul class="snsbtniti">
+        <li><a href="https://twitter.com/kstaisuzu" class="flowbtn6 fl_tw1"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://instagram.com/suzu_kitaiki/" class="flowbtn6 insta_btn6"><i class="fa fa-instagram"></i></a>
+        </li>
+        <li><a href="https://www.facebook.com/鈴木大己" class="flowbtn6 fl_fb6"><i class="fa fa-facebook-f"></i></a></li>
+    </ul>
+</div>
+
+</html>

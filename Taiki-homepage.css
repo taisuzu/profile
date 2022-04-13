@@ -1,0 +1,752 @@
+body {
+    font-family: monospace;
+    align-items: center;
+    text-align: center;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+
+
+/* ------------------header ----------------------------------*/
+
+.header {
+    width: 100%;
+    height: 50px;
+    z-index: 2;
+    position: fixed;
+    opacity: 0.7;
+}
+
+.menuButton {
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    cursor: pointer;
+    top: 0px;
+    left: 1%;
+    z-index: 3;
+}
+
+.menuButton div {
+    height: 2px;
+    width: 60%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+
+.menuButton div:nth-of-type(1) {
+    transform: translate(-50%, -12px);
+}
+
+.menuButton div:nth-of-type(2) {
+    opacity: 1;
+}
+
+.menuButton div:nth-of-type(3) {
+    transform: translate(-50%, 12px);
+}
+
+.menuButton.active {
+    background-color: #fff;
+}
+
+.menuButton.active div:nth-of-type(1) {
+    transform-origin: 50% 50%;
+    transform: rotate(45deg) translate(-50%, 0px);
+}
+
+.menuButton.active div:nth-of-type(2) {
+    opacity: 0;
+}
+
+.menuButton.active div:nth-of-type(3) {
+    transform-origin: 50% 50%;
+    transform: rotate(-45deg) translate(-50%, 0px);
+}
+
+
+/* -----------------main基本設定 ------------------------------*/
+
+main {
+    margin-bottom: 10vmax;
+}
+
+h1 {
+    font-family: 'Bona Nova', serif;
+    display: flex;
+    align-items: center;
+    margin-bottom: 6vh;
+}
+
+h1:before,
+h1:after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: #000;
+    display: block;
+}
+
+h1:before {
+    margin-right: .5em;
+    background: linear-gradient(-90deg, #000, transparent);
+}
+
+h1:after {
+    margin-left: .5em;
+    background: linear-gradient(90deg, #000, transparent);
+}
+
+
+/* -----------------ドロワーメニュー--------------------- */
+
+nav {
+    color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    position: fixed;
+    transition: scale(0.9);
+    top: 50px;
+    left: 0;
+    width: 300px;
+    z-index: 2;
+    overflow: auto;
+    height: 100%;
+}
+
+nav.active {
+    transition: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav ul li:not(:first-of-type
+/*最初のli以外*/
+
+) {
+    margin-top: 20px;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    visibility: hidden;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.mask.active {
+    opacity: 0.5;
+    visibility: visible;
+}
+
+
+/*--------------------- ファーストビュー -------------------------*/
+
+.first-view {
+    width: 100vw;
+    height: 80vh;
+}
+
+.first-view h1 {
+    margin-top: 25%;
+    font-size: 100px;
+    animation: fadeInBottom 2s 0s;
+}
+
+
+/*スクロールダウン全体の場所*/
+
+.scrolldown1 {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    top: 580px;
+    left: 50%;
+    bottom: 100px;
+    /*全体の高さ*/
+    height: 50px;
+    animation: fadeInBottom 2s 0s;
+}
+
+
+/*Scrollテキストの描写*/
+
+.scrolldown1 span {
+    /*描画位置*/
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    /*テキストの形状*/
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.arrow {
+    width: 0;
+    height: 40px;
+    border: 1px solid #333;
+    position: absolute;
+    left: 50.8%;
+    top: 600px;
+    animation: fadeInBottom 2s 0s;
+    animation: scroll 1.5s infinite;
+    -webkit-animation: scroll 1.5s infinite;
+}
+
+.arrow::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: -5px;
+    width: 1px;
+    height: 10px;
+    border-top: 10px solid #333;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+@keyframes scroll {
+    0% {
+        height: 40px;
+    }
+    30% {
+        height: 70px;
+    }
+    60% {
+        height: 40px;
+    }
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        height: 40px;
+    }
+    30% {
+        height: 70px;
+    }
+    60% {
+        height: 40px;
+    }
+}
+
+
+/* ----------メインコンテンツ------------ */
+
+.contents {
+    max-width: 90%;
+    margin: auto;
+    top: 10px;
+}
+
+
+/* ----------- about me --------------*/
+
+.profile {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.name h4 {
+    font-size: 3vh;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.profCon {
+    display: flex;
+    justify-content: space-between;
+}
+
+#profImg {
+    width: 40vw;
+    height: 45vw;
+    border-radius: 100px;
+    right: 5%;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+}
+
+.name h2 {
+    font-family: 'Bona Nova', serif;
+    font-size: 8vw;
+}
+
+
+/* ----------- Skills --------------*/
+
+.skills {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.skills-contents {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 25%;
+}
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+    .icon {
+        width: 50%;
+    }
+}
+
+@media screen and ( max-width:767px) {
+    .icon {
+        width: 100%;
+    }
+}
+
+.skills img {
+    width: 120px;
+    height: 120px;
+    mix-blend-mode: multiply;
+}
+
+
+/* -----------Likes--------------- */
+
+.Likes {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-wrapper {
+    width: 40vw;
+    display: flex;
+}
+
+.swiper-slide {
+    margin-left: 8%;
+    margin-right: 8%;
+    background-position: center;
+    background-size: cover;
+}
+
+.Likes img {
+    width: 60vh;
+    height: 48vh;
+    border-radius: 100px;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+}
+
+.Likes img:hover {
+    box-shadow: none;
+    cursor: grab;
+}
+
+.Likes img:active {
+    cursor: grabbing;
+}
+
+
+/* -----------Works--------------- */
+
+.Work {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.workCon {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+/*--------------------------------------
+  カード型_03
+--------------------------------------*/
+
+#sec {
+    padding: 0;
+    background: whitesmoke;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#sec ul {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+    border: none;
+}
+
+#sec ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 40px;
+    width: 480px;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+    box-shadow: 3px 3px 2px 2px #A2A2A2;
+}
+
+#sec ul li:hover {
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#sec ul li:hover span {
+    color: #63B7E6;
+}
+
+#sec ul li:hover p {
+    color: #555;
+}
+
+#sec ul li:hover .title01 {
+    color: #63B7E6;
+}
+
+#sec ul li:hover .title01:after {
+    width: 25px;
+}
+
+#sec ul li span {
+    font-size: 2.6em;
+    display: block;
+    transition: color 0.3s;
+    color: #A2A2A2;
+}
+
+#sec ul li span:before,
+#sec ul li span:after {
+    position: static;
+}
+
+#sec ul li .title01 {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 100;
+    transition: color 0.3s;
+}
+
+#sec ul li .title01:after {
+    content: "";
+    position: relative;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #6f6f6f;
+    transition: width 0.3s;
+}
+
+#sec ul li p {
+    text-indent: 1em;
+    line-height: 30px !important;
+    font-size: 16px;
+    line-height: 26px;
+    transition: color 0.3s;
+}
+
+
+/* -----------Contact--------------- */
+
+.Contact {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.Contact div {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.Contact p {
+    margin: auto;
+    line-height: 30px;
+}
+
+.Contact span {
+    color: red;
+}
+
+.Contact input {
+    border-radius: 10px;
+    width: 400px;
+}
+
+.Contact textarea {
+    border-radius: 10px;
+    width: 600px;
+    height: 20vh;
+}
+
+#conSubmit {
+    height: 50px;
+    width: 300px;
+    background-color: #666;
+    color: #ccc;
+    box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.8);
+}
+
+#conSubmit:hover {
+    box-shadow: none;
+}
+
+
+/* -------------SNS----------------- */
+
+.SNS {
+    position: fixed;
+    bottom: 5vh;
+    left: 1vw;
+}
+
+.flowbtn6 {
+    border-radius: 13px;
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin: 1vmin;
+    color: #fff!important;
+    transition: .3s;
+    text-decoration: none;
+}
+
+
+/* アイコンをど真ん中に*/
+
+.flowbtn6 i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/* ulタグの内側余白を０にする */
+
+ul.snsbtniti {
+    padding: 0!important;
+}
+
+
+/* アイコンボタンにマウスを乗せた時 */
+
+.flowbtn6:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+
+/* Twitter */
+
+.fl_tw1 {
+    background: #55acee;
+    opacity: .7;
+}
+
+.fl_tw1:hover {
+    opacity: 1.0;
+}
+
+
+/* Instagramアイコン位置 */
+
+.insta_btn6 {
+    opacity: .7;
+}
+
+.insta_btn6 .fa-instagram {
+    font-size: 40px;
+}
+
+.insta_btn6:hover {
+    opacity: 1;
+}
+
+
+/* Instagram紫グラデ背景 */
+
+.insta_btn6 {
+    background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    overflow: hidden;
+}
+
+
+/* Instagramオレンジグラデ背景 */
+
+.insta_btn6:before {
+    content: '';
+    position: absolute;
+    top: 27px;
+    left: -12px;
+    width: 59px;
+    height: 40px;
+    background: -webkit-radial-gradient(#ffdb2c 7%, rgba(255, 105, 34, 0.3) 60%, rgba(255, 88, 96, 0) 70%);
+    background: radial-gradient(#ffdb2c 7%, rgba(255, 105, 34, 0.3) 60%, rgba(255, 88, 96, 0) 70%);
+}
+
+
+/* Facebookアイコン位置 */
+
+.fl_fb6 .fa-facebook-f {
+    position: relative;
+    top: 26px;
+    left: 15px;
+    font-size: 42px;
+    opacity: 0.7;
+}
+
+.fl_fb6 .fa-facebook-f:hover {
+    opacity: 1.0;
+}
+
+
+/* Facebookアイコン背景*/
+
+.fl_fb6 {
+    background: -webkit-linear-gradient(top, #5c80c6 0%, #34528c 74%);
+    background: linear-gradient(to bottom, #5c80c6 0%, #34528c 74%);
+    opacity: 0.7;
+}
+
+.fl_fb6:hover {
+    opacity: 1.0;
+}
+
+
+/* -----------footer--------------- */
+
+.footer {
+    height: 120px;
+    background-color: #888;
+    color: whitesmoke;
+}
+
+#logo {
+    height: 100px;
+    cursor: pointer;
+}
+
+.button-shadow {
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+    background: #333;
+    /* 色変更可能 */
+    color: #fff;
+    font-weight: bold;
+    padding: 13px 10px 10px;
+    border-radius: 5px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+}
+
+.button-shadow:hover {
+    animation: 1s flash;
+}
+
+.button-shadow:active,
+.button-shadow:focus {
+    border-bottom-width: 0;
+    margin-top: 5px;
+    background: #333;
+    /* 色変更可能 */
+}
+
+@keyframes flash {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*文字animationを定義*/
+
+@keyframes showText {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.mainPicFont span {
+    animation: showText 2s backwards;
+    display: inline-block;
+}
+
+
+/*------ アニメーション ------*/
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+    30% {
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+    }
+}
