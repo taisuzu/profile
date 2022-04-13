@@ -105,7 +105,7 @@ h1:after {
 
 /* -----------------ドロワーメニュー--------------------- */
 
-nav {
+#nav {
     color: #000;
     opacity: 0;
     visibility: hidden;
@@ -118,23 +118,29 @@ nav {
     z-index: 2;
     overflow: auto;
     height: 100%;
+    margin-left: 14px;
 }
 
-nav.active {
+#nav.active {
     transition: scale(1);
     opacity: 1;
     visibility: visible;
 }
 
-nav ul {
+#nav ul {
     text-decoration: none;
     color: #000;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: whitesmoke;
 }
 
-nav ul li:not(:first-of-type
+#nav ul li a {
+    text-decoration: none;
+}
+
+#nav ul li:not(:first-of-type
 /*最初のli以外*/
 
 ) {
@@ -264,22 +270,23 @@ nav ul li:not(:first-of-type
 .profile {
     margin-top: 50px;
     margin-bottom: 50px;
+    height: 700px;
 }
 
 .name h4 {
-    font-size: 3vh;
+    font-size: 25px;
     font-weight: bold;
     font-style: italic;
 }
 
 .profCon {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #profImg {
-    width: 40vw;
-    height: 45vw;
+    width: 400px;
+    height: 500px;
     border-radius: 100px;
     right: 5%;
     box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
@@ -287,7 +294,7 @@ nav ul li:not(:first-of-type
 
 .name h2 {
     font-family: 'Bona Nova', serif;
-    font-size: 8vw;
+    font-size: 100px;
 }
 
 
