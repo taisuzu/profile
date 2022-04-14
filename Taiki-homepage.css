@@ -1,3 +1,7 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: monospace;
     align-items: center;
@@ -285,7 +289,7 @@ h1:after {
 }
 
 #profImg {
-    width: 430px;
+    width: 400px;
     height: 500px;
     border-radius: 100px;
     right: 5%;
@@ -294,7 +298,7 @@ h1:after {
 
 .name h2 {
     font-family: 'Bona Nova', serif;
-    font-size: 100px;
+    font-size: 90px;
 }
 
 
@@ -317,7 +321,7 @@ h1:after {
 .icon {
     padding-top: 50px;
     padding-bottom: 50px;
-    width: 25%;
+    width: 33%;
 }
 
 @media screen and (min-width:768px) and ( max-width:1024px) {
@@ -330,6 +334,39 @@ h1:after {
 @media screen and ( max-width:767px) {
     .icon {
         width: 100%;
+    }
+    .first-view h1 {
+        font-size: 60px !important;
+        margin-top: 50%;
+    }
+    .arrow {
+        left: 50%;
+    }
+    .scrolldown1 span {
+        left: -29px;
+    }
+    .profCon {
+        display: inline;
+    }
+    .name h2 {
+        font-size: 40px;
+    }
+    .name h4 {
+        font-size: 16px;
+    }
+    #profImg {
+        width: 200px;
+        height: 200px;
+    }
+    .Likes img {
+        width: 55vh !important;
+        height: 48vh!important;
+    }
+    .textBox input {
+        width: 300px !important;
+    }
+    .textBox textarea {
+        width: 300px !important;
     }
 }
 
@@ -729,7 +766,7 @@ ul.snsbtniti {
 }
 
 
-/*------ アニメーション ------*/
+/*------- アニメーション ------*/
 
 @keyframes fadeInBottom {
     from {
